@@ -1,0 +1,13 @@
+:root {
+	--header-height: 80px;
+	--footer-height: 30px;
+	--bright-blue: #1A1ACC;
+	--dark-blue: #000055;
+	--dark-blue-nav: #0606B0;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
