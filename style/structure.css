@@ -1,6 +1,6 @@
 .str-header{
 	display: flex;
-	padding: 10px 20px 10px 10px;
+	padding: 10rem 20rem 10rem 10rem;
 	height: var(--header-height);
 	align-items: center;
 	justify-content: flex-end;
@@ -12,7 +12,7 @@
 .str-main{
 	display: grid;
 	background-color: #003;
-	grid-template-columns: minmax(320px,1fr);
+	grid-template-columns: minmax(320rem,1fr);
 	grid-template-rows: repeat(4,minmax(100vh,1fr));
 }
 
@@ -31,9 +31,9 @@
 }
 
 .presentation-font{	
-	padding: 50px 15px;
+	padding: 50rem 15rem;
 	color: #FFFFFF;
-	font-size: 30px;	
+	font-size: 30rem;	
 	text-align: center;
 }
 
@@ -43,32 +43,32 @@
 
 .catalogue__container{
 	background-color: #0055AA;
-	padding-top: 25px;
-	padding-bottom: 50px;
+	padding-top: 25rem;
+	padding-bottom: 50rem;
 }
 
 .icon-container{
 	display: block;
-	margin: 50px 0px 2px 0px;
+	margin: 50rem 0rem 2rem 0rem;
 	text-align: center;
 }
 
 .icon{
-	padding: 20px;
+	padding: 20rem;
 	color: #FFFFFF;
 	background: #000088;
-	font-size: 50px;
+	font-size: 50rem;
 	clip-path: circle(50% at 50% 50%);
 	transition: 2s;
 }
 
 .icon:hover{
-	font-size: 60px;
+	font-size: 60rem;
 }
 
 .service__container{
 	display: block;
-	padding: 25px 15px 50px 15px;
+	padding: 25rem 15rem 50rem 15rem;
 	background-color: #0059bE;
 }
 
@@ -77,26 +77,75 @@
 }
 
 #budget{
-	padding: 20px 25px;
+	padding: 20rem 25rem;
 }
 
 #budget:hover{
-	padding: 20px 30px;
+	padding: 20rem 30rem;
 }
 
 .service__galery{
-	display: grid;
-	margin: 50px 0;
-	grid-template-rows: repeat(auto-fit,minmax(50px,1fr));
-	grid-template-columns: repeat(auto-fit,minmax(50px,1fr));
-	grid-gap: 5px;
+	display: block;
+	width: 100%;
+	height: 90vw;
+	background-color: red;
+	margin: 0;
+	padding: 0;
+	border: 3rem solid var(--dark-blue);
 	box-sizing: border-box;
-	background-color: var(--dark-blue);
-	padding: 5px;	
+	overflow: hidden;
 }
 
-.service__galery img{
-	width: 100%;
+.galery-container{
+	display: inline-block;
 	height: 100%;
-	object-fit: cover;
+	width: 200%;
+	position: relative;
+	animation-name: movimiento;
+	animation-duration: 64s;
+	animation-timing-function: cubic-bezier(0,1,0,1);
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+	animation-fill-mode: forwards;
 }
+
+.galery-container img{
+	float: left;
+	object-fit: cover;
+	width: 50%;
+	height: 100%;
+	position: relative;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+@keyframes movimiento{
+
+	0%{
+		transform: translateX(0%);
+	}
+
+	43.75%{
+		transform: translateX(0%);
+	}
+
+	50%{
+		transform: translateX(-50%);
+	}
+
+	51%{
+		transform: translateX(-50%);
+	}
+
+	93.75%{
+		transform: translateX(-50%);
+	}
+
+	100%{
+		transform: translateX(0%);
+	}
+
+};

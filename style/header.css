@@ -10,7 +10,7 @@
 
 .header__nav-bars{
 	color: #FFF;
-	font-size: 40px;
+	font-size: 40rem;
 }
 
 .header__nav-bars:hover > .header-nav {
@@ -24,9 +24,9 @@
 	width: 100%;
 	height: 60vh;
 	box-sizing: border-box;
-	min-width: 320px;
-	padding: 50px 0;
-	margin: 0px;
+	min-width: 320rem;
+	padding: 50rem 0;
+	margin: 0rem;
 	top: -60vh;
 	left: 0;
 	transition: 1s;
@@ -46,14 +46,14 @@
 }
 
 .header-nav__li i{
-	margin-left: 80px;
+	margin-left: 80rem;
 }
 
 .header-nav__li {
 	width: 100%;
-	padding: 30px 0px;
+	padding: 30rem 0rem;
 	font-family: Century Gothic;
-	font-size: 30px;
+	font-size: 30rem;
 	list-style: none;
 	text-align: left;
 }

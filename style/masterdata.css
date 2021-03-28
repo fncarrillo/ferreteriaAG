@@ -1,6 +1,6 @@
 :root {
-	--header-height: 80px;
-	--footer-height: 30px;
+	--header-height: 80rem;
+	--footer-height: 30rem;
 	--bright-blue: #1A1ACC;
 	--dark-blue: #000055;
 	--dark-blue-nav: #0606B0;
@@ -11,3 +11,12 @@
 	padding: 0;
 }
 
+html{
+	font-size: 1px;
+}
+
+@media only screen and (orientation=portrait) and (max-width: 320px){
+	html{
+		font-size: 1px;
+	}
+}
