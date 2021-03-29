@@ -11,7 +11,26 @@
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
-  font-family: Century Gothic, sans-serif;
+  font-family: Century Gothic,Questrial,Comfortaa,sans-serif;
+  font-size: 1px;
+}
+
+@media only screen and (orientation: portrait) and (min-width: 460px){
+  html{
+    font-size: 1.3px;
+  }
+}
+
+@media only screen and (orientation: portrait) and (min-width: 600px){
+  html{
+    font-size: 1.8px;
+  }
+}
+
+@media only screen and (orientation: portrait) and (min-width: 900px){
+  html{
+    font-size: 2.4px;
+  }
 }
 
 /* Sections
@@ -25,6 +44,7 @@ html {
 body {
   margin: 0;
   padding: 0;
+  width: 100vw;
   background-color: #000088;
 }
 
