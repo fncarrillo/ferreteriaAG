@@ -1,63 +1,127 @@
-.header{
-	box-sizing: border-box;
-	background-color: var(--bright-blue);
-	background-image: url(../img/web-logo/logo.png);
-	background-repeat: no-repeat;
-	background-position: left center;
-	background-size: contain;
-	background-origin: content-box;
+@media only screen and (orientation: portrait){
+
+	.header{
+		box-sizing: border-box;
+		background-color: var(--bright-blue);
+		background-image: url(../img/web-logo/logo.png);
+		background-repeat: no-repeat;
+		background-position: left center;
+		background-size: contain;
+		background-origin: content-box;
+	}
+
+	.header__nav-bars{
+		font-size: 40rem;
+	}
+
+	.header__nav-bars:hover > .header-nav {
+		transform: translateY(calc(60vh + var(--header-height)));
+	}
+
+	.header-nav{
+		background-color: var(--dark-blue-nav);
+		display: flex;
+		position: absolute;
+		width: 100%;
+		height: 60vh;
+		box-sizing: border-box;
+		min-width: 320rem;
+		padding: 50rem 0;
+		margin: 0rem;
+		top: -60vh;
+		left: 0;
+		transition: 1s;
+		transition-timing-function: ease;
+		z-index: 10;
+	}
+
+	.header-nav__ul{
+		width: 100%;
+		align-self: center;
+		text-decoration: none;
+	}
+
+	.header-nav__li a{
+		color: #FFF;
+		text-decoration: none;
+	}
+
+	.header-nav__li i{
+		margin-left: 80rem;
+	}
+
+	.header-nav__li {
+		width: 100%;
+		padding: 30rem 0rem;
+		font-family: Century Gothic;
+		font-size: 30rem;
+		list-style: none;
+		text-align: left;
+	}
+
+	.header-nav__li:hover{
+		background: #5353f9;
+	}
+
 }
 
-.header__nav-bars{
-	color: #FFF;
-	font-size: 40px;
-}
 
-.header__nav-bars:hover > .header-nav {
-	transform: translateY(calc(60vh + var(--header-height)));
-}
 
-.header-nav{
-	background-color: var(--dark-blue-nav);
-	display: flex;
-	position: absolute;
-	width: 100%;
-	height: 60vh;
-	box-sizing: border-box;
-	min-width: 320px;
-	padding: 50px 0;
-	margin: 0px;
-	top: -60vh;
-	left: 0;
-	transition: 1s;
-	transition-timing-function: ease;
-	z-index: 10;
-}
+@media only screen and (orientation: landscape){
+	.header{
+		box-sizing: border-box;
+		background-color: var(--bright-blue);
+		background-image: url(../img/web-logo/logo.png);
+		background-repeat: no-repeat;
+		background-position: left center;
+		background-size: contain;
+		background-origin: content-box;
+	}
 
-.header-nav__ul{
-	width: 100%;
-	align-self: center;
-	text-decoration: none;
-}
+	.header__nav-bars{
+		display: none;
+	}
 
-.header-nav__li a{
-	color: #FFF;
-	text-decoration: none;
-}
+	.header-nav{
+		background-color: var(--dark-blue-nav);
+		display: flex;
+		position: absolute;
+		width: 100%;
+		height: 60vh;
+		box-sizing: border-box;
+		min-width: 640rem;
+		padding: 50rem 0;
+		margin: 0rem;
+		top: 0;
+		left: 0;
+		z-index: 10;
+	}
 
-.header-nav__li i{
-	margin-left: 80px;
-}
+	.header-nav__ul{
+		width: 100%;
+		align-self: center;
+		text-decoration: none;
+	}
 
-.header-nav__li {
-	width: 100%;
-	padding: 30px 0px;
-	font-family: Century Gothic;
-	font-size: 30px;
-	list-style: none;
-	text-align: left;
-}
+	.header-nav__li a{
+		color: #FFF;
+		text-decoration: none;
+	}
 
-.header-nav__li:hover{
-	background: #5353f9;
+	.header-nav__li i{
+		margin-left: 80rem;
+	}
+
+	.header-nav__li {
+		width: 100%;
+		padding: 30rem 0rem;
+		font-family: Century Gothic;
+		font-size: 30rem;
+		list-style: none;
+		text-align: left;
+	}
+
+	.header-nav__li:hover{
+		background: #5353f9;
+	}
 }

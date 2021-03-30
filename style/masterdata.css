@@ -1,12 +1,16 @@
 :root {
-	--header-height: 80px;
-	--footer-height: 30px;
+	--header-height: 80rem;
+	--footer-height: 30rem;
 	--bright-blue: #1A1ACC;
-	--dark-blue: #000055;
+	--dark-ng-blue: #000055;
+	--dark-blue: #000088;
 	--dark-blue-nav: #0606B0;
+	--light-blue-1: #1A00BC;
+	--middle-blue: #2528C0;
 }
 
 * {
 	margin: 0;
 	padding: 0;
+	color: #FFFFFF;
 }
