@@ -1,7 +1,8 @@
 :root {
 	--header-height: 80rem;
 	--footer-height: 30rem;
-	--bright-blue: #1A1ACC;
+	--bright-blue-1: #1A1ACC;
+	--bright-blue-2: #5353F9;
 	--dark-ng-blue: #000055;
 	--dark-blue: #000088;
 	--dark-blue-nav: #0606B0;
