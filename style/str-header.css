@@ -72,15 +72,19 @@
 
 	.str-header__nav-bars{
 		height: var(--header-height);
+		box-sizing: content-box;
 		position: relative;
 		top: -10rem;
 		left: -10rem;
-		box-sizing: border-box; 
 	}
 
 	.str-header-nav{
 		background-color: transparent;
 		height: 100%;
+		box-sizing: border-box;
+		min-width: 320rem;
+		margin: 0;
+		padding: 0;
 	}
 
 	.str-header-nav__ul{
@@ -91,7 +95,7 @@
 		display: inline-flex;
 		height: 100%;
 		font-family: Century Gothic,Questrial,Comfortaa,sans-serif;
-		font-size: 14rem;
+		font-size: 18rem;
 		list-style: none;
 		align-items: center;
 	}
