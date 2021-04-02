@@ -1,13 +1,129 @@
-.header__background{
-	background-color: var(--bright-blue-1);
-	background-image: url(../img/web-logo/logo.png);
-	background-repeat: no-repeat;
-	background-position: left center;
-	background-size: contain;
-	background-origin: content-box;
-	box-sizing: border-box;
+.header-nav__li:hover{
+	background: var(--bright-blue-2);
 }
 
-.str-header-nav__li:hover{
-	background: var(--bright-blue-2);
+.logo_container{
+	height: 100%;
+	max-width: calc(2*(var(--header-height)));
+	padding: 5rem;
+	box-sizing: border-box;
+	float: left;
+	flex-grow: 10;
+}
+
+.logo_container img{
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+@media only screen and (orientation: portrait){
+	.header{
+		display: flex;
+		width: 100%;
+		height: var(--header-height);
+		background-color: var(--bright-blue-1);
+	}
+
+	.header__nav-bars{
+		box-sizing: border-box;
+		padding: 5rem;
+		margin: 10rem;
+		align-self: center;
+		font-size: 40rem;
+		flex-grow: 1;
+		text-align: right;
+	}
+
+	.header__nav-bars:hover > .header-nav {
+		transform: translateY(calc(60vh + var(--header-height)));
+	}
+
+	.header-nav{
+		background-color: var(--dark-blue-nav);
+		display: flex;
+		position: absolute;
+		width: 100%;
+		height: 60vh;
+		box-sizing: border-box;
+		min-width: 320rem;
+		padding: 50rem 0;
+		margin: 0rem;
+		top: -60vh;
+		left: 0;
+		transition: 1s;
+		transition-timing-function: ease;
+		z-index: 10;
+	}
+
+	.header-nav__ul{
+		width: 100%;
+		align-self: center;
+		text-decoration: none;
+	}
+
+	.header-nav__li a{
+		text-decoration: none;
+	}
+
+	.header-nav__li i{
+		margin-left: 80rem;
+	}
+
+	.header-nav__li{
+		width: 100%;
+		padding: 30rem 0rem;
+		font-family: Century Gothic,Questrial,Comfortaa,sans-serif;
+		font-size: 30rem;
+		list-style: none;
+		text-align: left;
+	}
+}
+
+@media only screen and (orientation: landscape){
+
+	.header{
+		display: block;
+		height: var(--header-height);
+		background-color: var(--bright-blue-1);
+		text-align: right;
+	}
+
+	.header__nav-bars{
+		height: var(--header-height);
+		box-sizing: content-box;
+	}
+
+	.header-nav{
+		background-color: transparent;
+		height: 100%;
+		box-sizing: border-box;
+		min-width: 320rem;
+		margin: 0;
+		padding: 0;
+	}
+
+	.header-nav__ul{
+		height: 100%;
+	}
+
+	.header-nav__li{
+		display: inline-flex;
+		height: 100%;
+		font-family: Century Gothic,Questrial,Comfortaa,sans-serif;
+		font-size: 18rem;
+		list-style: none;
+		align-items: center;
+	}
+
+	.header-nav__li a{
+		text-decoration: none;
+		margin-right: 20rem;
+	}
+
+	.header-nav__li i{
+		margin-right: 10rem;
+		margin-left: 20rem;
+	}
+
 }
