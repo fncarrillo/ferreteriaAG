@@ -87,6 +87,7 @@
 		height: var(--header-height);
 		background-color: var(--bright-blue-1);
 		text-align: right;
+		max-width: var(--web-max-width);
 	}
 
 	.header__nav-bars{

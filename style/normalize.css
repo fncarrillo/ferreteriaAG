@@ -13,6 +13,7 @@ html {
   -webkit-text-size-adjust: 100%; /* 2 */
   font-family: Century Gothic,Questrial,Comfortaa,sans-serif;
   font-size: 1px;
+  max-width: 1280px;
 }
 
 @media only screen and (orientation: portrait) and (min-width: 460px){
@@ -33,6 +34,30 @@ html {
   }
 }
 
+@media only screen and (orientation: landscape) and (min-width: 1024px){
+  html{
+    font-size: 1.1px;
+  } 
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1200px) and (max-width: 1280px){
+  html{
+    font-size: 1.2px;
+  }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 1281px){
+  html{
+    font-size: 1.2px;
+    margin: 0rem auto 0rem auto;
+  }
+  body{
+    max-width: var(--web-max-width);
+  }
+}
+
+
+
 /* Sections
    ========================================================================== */
 
@@ -44,9 +69,8 @@ html {
 body {
   margin: 0;
   padding: 0;
-  width: 100vw;
-  background-color: #000088;
-  max-width: 100vw;
+  background-color: #06062d;
+  max-width: 1280px;
 }
 
 p {
