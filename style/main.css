@@ -142,12 +142,6 @@
 		margin: 10rem;
 	}
 
-	.icon:hover{
-		font-size: 60rem;
-	}
-
-
-
 	.main{
 		display: grid;
 		box-sizing: border-box;
