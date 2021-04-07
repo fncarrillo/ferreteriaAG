@@ -118,7 +118,7 @@
 		display: grid;
 		list-style: none;
 		grid-template-rows: repeat(2,minmax(max-content,1fr));
-		grid-template-columns: minmax(200rem,1fr) repeat(2,minmax(min-content,1fr));
+		grid-template-columns: minmax(100rem,1fr) repeat(2,minmax(min-content,1fr));
 		align-items: center;
 		position: relative;
 		top: 0;
@@ -172,18 +172,18 @@
 
 	#ubication{
 		grid-column: 2 /span 2;
-		grid-row: 1 /span 1;
+		grid-row: 2 /span 1;
 	}
 	#phone{
-		grid-column: 2 /span 1;
-		grid-row: 2 /span 1;
+		grid-column: 3 /span 1;
+		grid-row: 1 /span 1;
 	}
 	#mail{
-		grid-column: 1 /span 1;
-		grid-row: 2 /span 1;
+		grid-column: 2 /span 1;
+		grid-row: 1 /span 1;
 	}
 	#clock{
-		grid-column: 3 /span 1;
+		grid-column: 1 /span 1;
 		grid-row: 2 /span 1;
 	}
 	.network{
