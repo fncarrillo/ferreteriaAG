@@ -1,13 +1,14 @@
 :root {
 	--header-height: 80rem;
 	--footer-height: 30rem;
-	--bright-blue-1: #1A1ACC;
-	--bright-blue-2: #5353F9;
-	--dark-ng-blue: #000055;
-	--dark-blue: #000088;
-	--dark-blue-nav: #0606B0;
-	--light-blue-1: #1A00BC;
-	--middle-blue: #2528C0;
+	--header-color: #0000CC;
+	--footer-color: #000055;
+	--icon-color: #15159D;
+	--header-hover-color: #4D4DFF;
+	--section-color: #3358FF;
+	--section-color2: #0633FF;
+	--dark-border: #000055;
+	--light-border: #0000FF;
 	--web-max-width: 1280px;
 }
 

@@ -1,5 +1,5 @@
 .header-nav__li:hover{
-	background: var(--bright-blue-2);
+	background: var(--header-hover-color);
 }
 
 .logo_container{
@@ -22,7 +22,7 @@
 		display: flex;
 		width: 100%;
 		height: var(--header-height);
-		background-color: var(--bright-blue-1);
+		background-color: var(--header-color);
 	}
 
 	.header__nav-bars{
@@ -40,7 +40,7 @@
 	}
 
 	.header-nav{
-		background-color: var(--dark-blue-nav);
+		background-color: var(--icon-color);
 		display: flex;
 		position: absolute;
 		width: 100%;
@@ -85,7 +85,7 @@
 	.header{
 		display: block;
 		height: var(--header-height);
-		background-color: var(--bright-blue-1);
+		background-color: var(--header-color);
 		text-align: right;
 		max-width: var(--web-max-width);
 	}
