@@ -31,7 +31,7 @@
 	}
 
 	.catalogue__container{
-		background-color: var(--section-color);
+		background-color: var(--section-color2);
 		padding-top: 25rem;
 		padding-bottom: 50rem;
 	}
@@ -58,7 +58,7 @@
 	.service__container{
 		display: block;
 		padding: 25rem 15rem 50rem 15rem;
-		background-color: var(--section-color2);
+		background-color: var(--section-color);
 	}
 	
 	.service__galery{
@@ -66,7 +66,7 @@
 	}
 
 	.budget{
-		background-color: var(--section-color);
+		background-color: var(--section-color2);
 	}
 
 	#budget{
@@ -173,7 +173,7 @@
 
 
 	.catalogue__container{
-		background-color: var(--section-color);
+		background-color: var(--section-color2);
 	}
 
 	.icon-container{
@@ -184,7 +184,7 @@
 
 
 	.service__container{
-		background-color: var(--section-color2);
+		background-color: var(--section-color);
 		flex-direction: row-reverse;
 	}
 	
@@ -216,7 +216,7 @@
 
 
 	.budget{
-		background-color: var(--section-color);
+		background-color: var(--section-color2);
 		flex-direction: row;
 	}
 
