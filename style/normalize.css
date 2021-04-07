@@ -13,7 +13,7 @@ html {
   -webkit-text-size-adjust: 100%; /* 2 */
   font-family: Century Gothic,Questrial,Comfortaa,sans-serif;
   font-size: 1px;
-  max-width: 1280px;
+  /*max-width: 1280px;*/
 }
 
 @media only screen and (orientation: portrait) and (min-width: 460px){
@@ -33,7 +33,7 @@ html {
     font-size: 2.4px;
   }
 }
-
+/*
 @media only screen and (orientation: landscape) and (min-width: 1024px){
   html{
     font-size: 1.1px;
@@ -56,7 +56,7 @@ html {
   }
 }
 
-
+*/
 
 /* Sections
    ========================================================================== */
@@ -70,7 +70,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #06062d;
-  max-width: 1280px;
+  /*max-width: 1280px;*/
 }
 
 p {

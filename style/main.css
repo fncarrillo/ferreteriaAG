@@ -142,7 +142,7 @@
 		box-sizing: border-box;
 		grid-template-columns: minmax(640rem,1fr);
 		grid-template-rows: repeat(4,minmax(auto,1fr));
-		max-width: var(--web-max-width);
+		/*max-width: var(--web-max-width);*/
 	}
 
 	.main-section{
