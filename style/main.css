@@ -120,8 +120,13 @@
 
 	.font{	
 		padding: 50rem 25rem;
-		font-size: 25rem;
+		font-size: 20rem;
 		text-align: justify;
+	}
+
+	.icon-container{
+		text-align: center;
+		margin: 40rem 20rem 20rem 20rem;
 	}
 
 	.icon{
@@ -134,20 +139,13 @@
 	}
 
 	.main{
-		display: grid;
-		grid-template-columns: repeat(3,minmax(210rem,1fr));
-		grid-template-rows: min-content minmax(auto,1fr);
-		align-items: center;
-		justify-content: space-evenly;
+		display: inline-block;
 		box-sizing: content-box;
+	    width: 100%;
 		/*max-width: var(--web-max-width);*/
 	}
 
 	.presentation{
-		margin: 0;
-		padding: 0;
-		grid-column: 1 /span 3;
-		grid-row: 1 / span 1;
 		background-image: url("../img/Entrance/Mostrador.jpg");
 		background-repeat: no-repeat;
 		background-clip: content-box;
@@ -157,27 +155,33 @@
 	}
 
 	#presentation{
-		margin: 160rem 0rem;
+		font-size: 22rem;
+		font-weight: bold;
 		padding: 50rem 160rem;
+		margin: 120rem 0rem;
 		text-align: center;
 		background: rgba(0,0,0,0.5);
 	}
 
+	.structure-landscape{
+		display: flex;
+		width: 100%;
+	}
+
 	.main-section{
-		box-sizing: border-box;
-		height: 100%;
+		display: inline-block;
+    	box-sizing: border-box;
 	}
 
 	.catalogue__container{
+		flex-grow: 1;
+		width: 100%;
 		background-color: var(--section-color2);
 	}
 
-	.icon-container{
-		text-align: center;
-		margin: 40rem 20rem 20rem 20rem;
-	}
-
 	.service__container{
+		flex-grow: 4;
+		width: 100%;
 		background-color: var(--section-color);
 	}
 	
@@ -186,6 +190,8 @@
 	}
 
 	.budget{
+		flex-grow: 1;
+		width: 100%;
 		background-color: var(--section-color2);
 	}
 

@@ -118,7 +118,7 @@
 		display: grid;
 		list-style: none;
 		grid-template-rows: repeat(2,minmax(max-content,1fr));
-		grid-template-columns: 200rem repeat(2,minmax(min-content,1fr));
+		grid-template-columns: minmax(200rem,1fr) repeat(2,minmax(min-content,1fr));
 		align-items: center;
 		position: relative;
 		top: 0;
@@ -157,7 +157,7 @@
 	.footer__data{
 		font-style: normal;
 		text-align: left;
-		font-size: 10rem;
+		font-size: 12rem;
 		margin: 2rem 10rem;	
 		line-height: 1;
 	}
