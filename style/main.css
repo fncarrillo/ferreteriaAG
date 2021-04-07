@@ -11,7 +11,7 @@
 		align-items: center;
 	}
 
-	.background-web{
+	.presentation{
 		background-image: url("../img/Entrance/Mostrador.jpg");
 		background-repeat: no-repeat;
 		background-clip: content-box;
@@ -20,13 +20,13 @@
 		background-attachment: fixed;
 	}
 
-	.presentation-font{	
+	.font{	
 		padding: 50rem 15rem;
 		font-size: 30rem;	
 		text-align: center;
 	}
 
-	#presentation-opacity{
+	#presentation{
 		background: rgba(0,0,0,0.5);
 	}
 
@@ -118,14 +118,10 @@
 
 @media only screen and (orientation: landscape){
 
-	.presentation-font{	
+	.font{	
 		padding: 50rem 25rem;
-		font-size: 30rem;
-		text-align: right;
-	}
-
-	.main-section > #presentation-opacity{
-		text-align: center;
+		font-size: 25rem;
+		text-align: justify;
 	}
 
 	.icon{
@@ -139,24 +135,19 @@
 
 	.main{
 		display: grid;
-		box-sizing: border-box;
-		grid-template-columns: minmax(640rem,1fr);
-		grid-template-rows: repeat(4,minmax(auto,1fr));
+		grid-template-columns: repeat(3,minmax(210rem,1fr));
+		grid-template-rows: min-content minmax(auto,1fr);
+		align-items: center;
+		justify-content: space-evenly;
+		box-sizing: content-box;
 		/*max-width: var(--web-max-width);*/
 	}
 
-	.main-section{
-		display: flex;
-		align-items: center;
-		position: relative;
-		padding: 100rem 30rem;
-	}
-
-	.main-section:first-child{
+	.presentation{
+		margin: 0;
 		padding: 0;
-	}
-
-	.background-web{
+		grid-column: 1 /span 3;
+		grid-row: 1 / span 1;
 		background-image: url("../img/Entrance/Mostrador.jpg");
 		background-repeat: no-repeat;
 		background-clip: content-box;
@@ -165,59 +156,37 @@
 		background-attachment: fixed;
 	}
 
-	#presentation-opacity{
+	#presentation{
+		margin: 160rem 0rem;
+		padding: 50rem 160rem;
+		text-align: center;
 		background: rgba(0,0,0,0.5);
 	}
 
-
-
+	.main-section{
+		box-sizing: border-box;
+		height: 100%;
+	}
 
 	.catalogue__container{
 		background-color: var(--section-color2);
 	}
 
 	.icon-container{
-		margin: 20rem;
+		text-align: center;
+		margin: 40rem 20rem 20rem 20rem;
 	}
-
-
-
 
 	.service__container{
 		background-color: var(--section-color);
-		flex-direction: row-reverse;
 	}
 	
-	.service__container > .presentation-font{
-		text-align: left;
-	}
-
 	.service__galery{
 		display: none;
 	}
 
-	.galery-container{
-		display: inline-block;
-		width: 200%;
-		position: relative;
-		animation-name: movimiento;
-		animation-duration: 64s;
-		animation-timing-function: cubic-bezier(0,1,0,1);
-		animation-iteration-count: infinite;
-		animation-direction: normal;
-		animation-fill-mode: forwards;
-	}
-
-	.galery-container img{
-		float: left;
-		object-fit: cover;
-		width: 50%;
-	}
-
-
 	.budget{
 		background-color: var(--section-color2);
-		flex-direction: row;
 	}
 
 	#budget{
