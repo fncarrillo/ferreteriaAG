@@ -13,8 +13,6 @@ html {
   -webkit-text-size-adjust: 100%; /* 2 */
   font-family: Century Gothic,Questrial,Comfortaa,sans-serif;
   font-size: 1px;
-  max-width: var(--web-max-width);
-  min-width: var(--web-min-width);
 }
 
 @media only screen and (orientation: portrait) and (min-width: 460px){
@@ -38,6 +36,8 @@ html {
 @media only screen and (orientation: landscape){
   html{
     font-size: 0.8px;
+    max-width: var(--web-max-width);
+    min-width: var(--web-min-width);
   }
 }
 

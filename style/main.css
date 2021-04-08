@@ -1,14 +1,8 @@
 @media only screen and (orientation: portrait){
 
 	.main{
-		display: grid;
-		grid-template-columns: minmax(320rem,1fr);
-		grid-template-rows: repeat(4,minmax(100vh,1fr));
-	}
-
-	.main-section:first-child{
-		display: flex;
-		align-items: center;
+		display: block;
+		box-sizing: content-box;
 	}
 
 	.presentation{
@@ -17,7 +11,6 @@
 		background-clip: content-box;
 		background-size: cover;
 		background-position: center center;
-		background-attachment: fixed;
 	}
 
 	.font{	
@@ -26,14 +19,34 @@
 		text-align: center;
 	}
 
+	.main > .main-section:first-child{
+		display: flex;
+		align-content: center;
+		height: 100vh;
+	}
+
 	#presentation{
+		font-size: 20rem;
+		font-weight: bold;
+		text-align: center;
 		background: rgba(0,0,0,0.5);
+		align-self: center;
+	}
+
+	.structure{
+		display: grid;
+		grid-template-columns: minmax(320rem,1fr);
+		grid-template-rows: repeat(3,minmax(100vh,1fr));
+	}
+
+	.structure > .main-section{
+		padding: 25rem 10rem 50rem 10rem;
+		height: 100%;
+		box-sizing: border-box;
 	}
 
 	.catalogue__container{
 		background-color: var(--section-color2);
-		padding-top: 25rem;
-		padding-bottom: 50rem;
 	}
 
 	.icon-container{
@@ -61,9 +74,6 @@
 		background-color: var(--section-color);
 	}
 	
-	.service__galery{
-
-	}
 
 	.budget{
 		background-color: var(--section-color2);
@@ -164,10 +174,10 @@
 		background: rgba(0,0,0,0.5);
 	}
 
-	.structure-landscape{
+	.structure{
 		display: flex;
 		width: 100%;
-		background-color: var(--structure-landscape-color);
+		background-color: var(--structure-color);
 	}
 
 	.main-section{
@@ -218,7 +228,7 @@
 			font-size: 30rem;
 		}
 
-		.structure-landscape > .main-section{
+		.structure > .main-section{
 			background-color: var(--section-color2);
 			margin: 30rem;
 			box-shadow: 10px 10px 1px 0px rgba(0,0,0,0.75);
@@ -231,7 +241,7 @@
 			font-size: 30rem;
 		}
 
-		.structure-landscape > .main-section{
+		.structure > .main-section{
 			margin: 50rem;
 			padding: 20rem; 
 		}
@@ -243,7 +253,7 @@
 	}
 
 	@media (min-width: 1440px){
-		.structure-landscape > .main-section{
+		.structure > .main-section{
 			margin: 120rem;
 			padding: 40rem;
 		}
@@ -256,7 +266,7 @@
 	}	
 
 	@media (min-width: 1700px){
-		.structure-landscape > .main-section{
+		.structure > .main-section{
 			margin: 150rem;
 			padding: 60rem;
 		}
