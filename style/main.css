@@ -16,7 +16,7 @@
 		background-repeat: no-repeat;
 		background-clip: content-box;
 		background-size: cover;
-		background-position: left center;
+		background-position: center center;
 		background-attachment: fixed;
 	}
 
@@ -150,12 +150,12 @@
 		background-repeat: no-repeat;
 		background-clip: content-box;
 		background-size: cover;
-		background-position: left center;
+		background-position: center center;
 		background-attachment: fixed;
 	}
 
 	#presentation{
-		font-size: 22rem;
+		font-size: 30rem;
 		font-weight: bold;
 		padding: 50rem 160rem;
 		margin: 120rem 0rem;
@@ -166,6 +166,7 @@
 	.structure-landscape{
 		display: flex;
 		width: 100%;
+		background-color: var(--structure-landscape-color);
 	}
 
 	.main-section{
@@ -202,6 +203,23 @@
 	#budget:hover{
 		padding: 20rem 30rem;
 	}
+
+	@media (min-width: 800px){
+		#presentation{
+			font-size: 30rem;
+		}
+
+		.structure-landscape > .main-section{
+			margin: 30rem;
+			box-shadow: 10px 10px 1px 0px rgba(0,0,0,0.75);
+		}
+
+		.service__container{
+			background-color: var(--section-color2);
+		}
+
+	}
+
 
 }
 
