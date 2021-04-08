@@ -95,7 +95,7 @@
 		padding: 30rem;
 		width: 100vw;
 		box-sizing: border-box;
-		/*max-width: var(--web-max-width);*/
+		max-width: var(--web-max-width);
 	}
 
 	.footer__logo-container{

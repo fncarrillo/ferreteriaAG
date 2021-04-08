@@ -85,14 +85,14 @@
 	.header{
 		display: block;
 		height: var(--header-height);
+		width: 100%;
 		background-color: var(--header-color);
 		text-align: right;
-		/*max-width: var(--web-max-width);*/
+		max-width: var(--web-max-width);
 	}
 
 	.header__nav-bars{
-		height: var(--header-height);
-		box-sizing: content-box;
+		height: 100%;
 	}
 
 	.header-nav{
@@ -125,6 +125,25 @@
 	.header-nav__li i{
 		margin-right: 10rem;
 		margin-left: 20rem;
+	}
+
+	@media (min-width: 1000px){
+		.header{
+			height: calc(var(--header-height) + 20rem);
+		}
+
+		.header-nav__li{
+			font-size: 22rem;
+		}
+
+	}
+
+	@media (min-width: 1440px){
+
+	}	
+
+	@media (min-width: 1700px){
+
 	}
 
 }

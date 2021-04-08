@@ -10,7 +10,7 @@
 	--dark-border: #000055;
 	--light-border: #0000FF;
 	--structure-landscape-color: #3366ff;
-	--web-max-width: 1280px;
+	--web-max-width: 1920px;
 }
 
 * {
@@ -18,3 +18,20 @@
 	padding: 0;
 	color: #FFFFFF;
 }
+
+
+/*
+
+	Landscape resolutions:
+	min-width: 640
+	min-width: 800
+	min-width: 1000
+	min-width: 1440
+	min-width: 1700
+
+	Portrait resolutions:
+	min-width: 460	
+	min-width: 600	
+	min-width: 900	
+
+*/
