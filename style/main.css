@@ -26,7 +26,7 @@
 	}
 
 	#presentation{
-		font-size: 20rem;
+		font-size: 30rem;
 		font-weight: bold;
 		text-align: center;
 		background: rgba(0,0,0,0.5);
@@ -124,6 +124,20 @@
 		padding: 0;
 		border: none;
 	}
+
+	@media (min-width: 900px){
+		.structure > .main-section{
+			padding: 25rem 20rem 50rem 20rem;
+		}
+	}
+
+	@media (min-width: 1200px){
+		.structure > .main-section{
+			padding: 25rem 15% 50rem 15%;
+		}
+	}
+
+
 }
 
 @media only screen and (orientation: landscape){
