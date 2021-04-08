@@ -89,6 +89,7 @@
 		background-color: var(--header-color);
 		text-align: right;
 		max-width: var(--web-max-width);
+		min-width: var(--web-min-width);
 	}
 
 	.header__nav-bars{

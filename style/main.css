@@ -143,6 +143,7 @@
 		box-sizing: content-box;
 	    width: 100%;
 		max-width: var(--web-max-width);
+		min-width: var(--web-min-width);
 	}
 
 	.presentation{

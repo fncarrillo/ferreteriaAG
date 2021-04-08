@@ -11,6 +11,7 @@
 	--light-border: #0000FF;
 	--structure-landscape-color: #3366ff;
 	--web-max-width: 1920px;
+	--web-min-width: 640px;
 }
 
 * {

@@ -14,6 +14,7 @@ html {
   font-family: Century Gothic,Questrial,Comfortaa,sans-serif;
   font-size: 1px;
   max-width: var(--web-max-width);
+  min-width: var(--web-min-width);
 }
 
 @media only screen and (orientation: portrait) and (min-width: 460px){
@@ -54,6 +55,7 @@ body {
   padding: 0;
   background-color: #06062d;
   max-width: var(--web-max-width);
+  min-width: var(--web-min-width);
 }
 
 p {
