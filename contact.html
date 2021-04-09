@@ -41,73 +41,62 @@
 
 	<main class="main">
 		<div class="form__container">
-			<p class="form__container-title">¡Contáctanos!</p>
+			<h2 class="form__container-title">¡Contáctanos!</h2>
+			<p class="form__container-introduction">
+				Envianos un correo a nuestro email ferreteria@agserviciossrl.com o completa el siguiente formulario:
+			</p>
 			<form method="POST" class="form">
 				<div class="form__input-container">
 					<input type="text" name="name" placeholder="Ingrese su nombre">
 				</div>
 				<div class="form__input-container">
 					<input type="text" name="email" placeholder="Ingrese su email">
+					<label>Email invalido</label>
 				</div>
 				<div class="form__textarea-container">
 					<textarea placeholder="Ingrese su mensaje"></textarea>
+					<label>Mensaje vacio</label>
 				</div>
 				<div class="form__submit-container">
 					<input type="submit" name="Enviar" value="Enviar">
 				</div>
 			</form>
 		</div>
-	</main>
 
-	<footer>
+		<div class="local-data__container">
+			<ul class="local-data__ul">
+				<li class="local-data__li local-data__title">UBICACION</li>
+				<li class="local-data__data">Intendente M. Quindimil 118, CP 1824</li>
+				<li class="local-data__data">Lanus Oeste, Buenos Aires, Argentina</li>
 
-		<div class="font footer__logo-container">
-			<img src="img/web-logo/logo.png">
+				<span class="separador"></span>
+				
+				<li class="local-data__li local-data__title">TELEFONOS</li>
+				<li class="local-data__data">(+54 11) 7705-1474</li>
+				<li class="local-data__data">(+54 11) 3292-4361</li>
+				
+
+				<span class="separador"></span>
+
+				<li class="local-data__li local-data__title">HORARIO</li>
+				<li class="local-data__data">Lunes-Viernes: 08-18hs</li>
+				<li class="local-data__data">Sabados: 09-13hs</li>
+				
+
+				<span class="separador"></span>
+
+				<li class="local-data__li local-data__title">SIGUENOS EN</li>
+				<a class="local-data__social-network" href="https://facebook.com/ferre.ag.7" target="_blank">
+					<i class="fab fa-facebook-square local-data__icon"></i>
+				</a>
+				<a class="local-data__social-network" href="https://instagram.com/ferreteriaagservicios/" target="_blank">
+					<i class="fab fa-instagram local-data__icon"></i>
+				</a>
+				
+
+			</ul>
 		</div>
-		
-		<ul class="footer__ul">
-			<li class="footer__li footer__title">UBICACION</li>
-			<li class="footer__li" id="ubication"><i class="fas fa-map-marker-alt footer__icon"></i>
-				<p class="footer__data">Intendente M. Quindimil 118, CP 1824</p>
-				<p class="footer__data">Lanus Oeste, Buenos Aires, Argentina</p>
-			</li>
-			
-			<li class="footer__li footer__title">CONTACTO</li>
-			<li class="footer__li" id="phone">
-				<i class="fas fa-phone-alt footer__icon"></i>
-				<p class="footer__data">(+54 11) 7705-1474</p>
-				<p class="footer__data">(+54 11) 3292-4361</p>
-			</li>
-			
-			<li class="footer__li" id="mail">
-				<i class="fas fa-envelope footer__icon"></i>
-				<p class="footer__data" id="footer__data-alone">ferreteria@agserviciossrl.com</p>
-			</li>
-
-			<li class="footer__li" id="clock">
-				<i class="fas fa-clock footer__icon"></i>
-				<p class="footer__data">Lunes-Viernes: 08-18hs</p>
-				<p class="footer__data">Sabados: 09-13hs</p>
-			</li>
-
-			<li class="footer__li network" id="fb">
-				<a class="footer__social-network" href="https://facebook.com/ferre.ag.7" target="_blank">
-					<i class="fab fa-facebook-square footer__icon"></i>
-					<p class="footer__data" id="footer__data-alone">Facebook</p>
-				</a>
-			</li>
-
-			<li class="footer__li network" id="is">
-				<a class="footer__social-network" href="https://instagram.com/ferreteriaagservicios/" target="_blank">
-					<i class="fab fa-instagram footer__icon"></i>
-					<p class="footer__data" id="footer__data-alone">Instagram</p>
-				</a>
-			</li>
-
-		</ul>
-
-		<p class="copyright"> Copyright © 2021 – All rights reserved</p>
-	</footer>
+	</main>
 
 </body>	
 </html>

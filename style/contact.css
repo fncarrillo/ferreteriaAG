@@ -3,6 +3,7 @@
 	.main{
 		display: flex;
 		box-sizing: content-box;
+		flex-direction: column;
 	}
 
 	.form__container{
@@ -10,20 +11,28 @@
 		background-color: var(--structure-color);
 		width: 100%;
 		height: 100vh;
+		min-height: 100vh;
 		font-size: 15rem;
 		flex-direction: column;
 		align-items: flex-start;
 		justify-content: center;
 		box-sizing: border-box;
-		padding: 30rem;
+		padding: 0 50rem;
 	}
 
 	.form__container-title{
-		width: 100%;
+		display: inline-block;
 		text-align: left;
 		font-weight: bold;
 		font-size: 25rem;
 		margin: 20rem 0;
+		text-shadow: 5px 5px rgba(0,0,0,0.75);
+	}
+
+	.form__container-introduction{
+		display: block;
+		font-size: 15rem;
+		margin: 15rem 0rem;
 	}
 
 	.form{
@@ -48,7 +57,9 @@
 		padding: 10rem;
 		border: none;
 		box-sizing: border-box;
-		box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.75);
+		background-color: #ccd9ff;
+		color: #000;
+		border: 0px solid #000000;
 	}
 
 	.form__submit-container input{
@@ -56,13 +67,86 @@
 		border: none;
 		background-color: var(--section-color2);
 		color: #FFF;
-		box-shadow: 5px 5px 0px 0px rgba(0,0,0,0.75);
 	}
 
 	::placeholder{
 		font-size: 15rem;
 	}
 	
+	label{
+		display: none;
+		color: #F50088;
+		margin: 5rem;
+		font-weight: bold;
+	}
+
+	textarea:focus, input[type=text]:focus{
+		outline: none;
+		border-radius: 0;
+		resize: none;
+		background-color: #FFF;
+		border: 4rem solid #0040ff;
+		-webkit-box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.75);
+		-moz-box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.75);
+		box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.75);
+	}
+
+	.form__submit-container input:focus{
+		outline: none;
+		border: 4rem solid #0040ff;
+		font-weight: bold;
+		-webkit-box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.75);
+		-moz-box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.75);
+		box-shadow: 5px 5px 1px 0px rgba(0,0,0,0.75);
+	}
+
+	.local-data__container{
+		position: relative;
+		display: flex;
+		margin: 32rem;
+		height: 100vh;
+		width: 80%;
+		font-size: 15rem;
+		background-color: var(--section-color2);
+	}
+
+	.local-data__ul{
+		position: absolute;
+		top: -50rem;
+		background-color: inherit;
+		padding: 60rem 20rem;
+		list-style: none;
+	}
+
+	.local-data__data{
+		font-size: 18rem;
+		margin: 0;
+		font-weight: normal;
+		font-style: italic;
+	}
+
+	.local-data__title{
+		font-size: 20rem;
+		font-weight: bold;
+		margin-bottom: 10rem;
+	}
+
+	.separador{
+		display: inline-block;
+		height: 5rem;
+		width: 100%;
+		background-color: rgb(255,255,255,0.5);
+		clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+		margin: 20rem 0;
+	}
+
+	.local-data__social-network{
+		font-size: 30rem;
+	}
+
+	.local-data__social-network a{
+		
+	}
 
 
 }
