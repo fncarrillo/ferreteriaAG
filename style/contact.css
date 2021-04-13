@@ -265,8 +265,7 @@
 	.local-data__container{
 		position: relative;
 		display: flex;
-		min-width: 50vw;
-		box-sizing: border-box;
+		min-width: 65vw;
 		margin: 40rem 90rem 40rem 0rem;
 		left: -90rem;
 		font-size: 15rem;
@@ -366,6 +365,39 @@
 		.local-data__social-network{
 			font-size: 25rem;
 		}
+	}
+
+	@media (min-width: 1000px){
+		.form__container-title{
+			font-size: 25rem;
+		}
+
+		.form__container-introduction{
+			font-size: 20rem;
+		}
+
+		.form__input-container input, .form__input-container textarea{
+			font-size: 18rem;
+		}
+
+		::placeholder{
+			font-size: 18rem;
+		}
+
+		.form__submit-container input{
+			font-size: 18rem;	
+		}
+
+		.local-data__container{
+			width: 600rem;
+			left: -120rem;
+			margin: 40rem 40rem 40rem 0rem;
+		}
+
+		.map__container{
+			width: 300rem;
+		}
+
 	}
 
 }
