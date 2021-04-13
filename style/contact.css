@@ -354,4 +354,18 @@
 		object-position: center center;
 	}
 
+	@media (min-width: 800px){
+		.local-data__title{
+			font-size: 18rem;
+		}
+
+		.local-data__data{
+			font-size: 15rem;
+		}
+
+		.local-data__social-network{
+			font-size: 25rem;
+		}
+	}
+
 }
