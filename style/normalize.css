@@ -35,13 +35,11 @@ html {
 
 @media only screen and (orientation: landscape){
   html{
-    font-size: 0.8px;
-    max-width: var(--web-max-width);
-    min-width: var(--web-min-width);
+      font-size: 0.8px;
+      max-width: var(--web-max-width);
+      min-width: var(--web-min-width);
   }
 }
-
-
 /* Sections
    ========================================================================== */
 
