@@ -397,7 +397,20 @@
 		.map__container{
 			width: 300rem;
 		}
-
 	}
+
+	@media (min-width: 1440px){
+		.form__container{
+			padding: 50rem 90rem;
+			min-width: 45%;
+		}
+
+		.local-data__container{
+			min-width: 55%;
+			margin: 50rem 0;
+		}
+	}
+
+	
 
 }
