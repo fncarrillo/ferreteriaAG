@@ -36,8 +36,6 @@ html {
 @media only screen and (orientation: landscape){
   html{
       font-size: 0.8px;
-      max-width: var(--web-max-width);
-      min-width: var(--web-min-width);
   }
 }
 /* Sections
@@ -52,8 +50,6 @@ body {
   margin: 0;
   padding: 0;
   background-color: #06062d;
-  max-width: var(--web-max-width);
-  min-width: var(--web-min-width);
 }
 
 p {

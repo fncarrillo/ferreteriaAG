@@ -1,5 +1,12 @@
 @media only screen and (orientation: portrait){
 /*https://nicepage.com/css-templates/preview/contact-us-for-the-best-customer-service-62904?device=desktop*/
+	.main{
+		display: block;
+		max-width: 100vw;
+		min-height: 100vh;
+		height: 100vh;
+	}
+
 	.galery__container{
 		display: block;
 		position: relative;
@@ -29,8 +36,6 @@
 		display: flex;
 		box-sizing: content-box;
 		flex-direction: column;
-		height: 180vh;
-    	max-height: 200vh;
 	}
 
 	.form__container{
@@ -131,8 +136,7 @@
 		position: relative;
 		top: -70rem;
 		display: flex;
-		height: 100vw;
-		max-height: 150vh;
+		min-height: 100vh;
 		margin: 32rem;
 		margin-bottom: 100rem;
 		font-size: 15rem;
@@ -191,6 +195,28 @@
 	@media (min-width: 600px){
 		.local-data__container{
 			top: -50rem;
+		}
+	}
+
+	@media (min-width: 1300px){
+		.local-data__container{
+			top: -80rem;
+		}
+	}
+
+	@media (min-width: 1600px){
+		.galery__container{
+			margin: 100rem;
+		}
+
+		.form__container{
+			padding-left: 100rem;
+			padding-right: 100rem;
+		}
+
+		.local-data__container{
+			margin-left: 100rem;
+			margin-right: 100rem;
 		}
 	}
 
