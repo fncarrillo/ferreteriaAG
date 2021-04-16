@@ -427,7 +427,7 @@
 		}
 
 		.local-data__social-network{
-			font-size: 25rem;
+			font-size: 30rem;
 		}
 	}
 
@@ -461,6 +461,10 @@
 			min-width: 55%;
 			left: -120rem;
 			margin: 40rem 40rem 40rem 0rem;
+		}
+
+		.local-data__social-network{
+			font-size: 40rem;
 		}
 
 		.map__container{
