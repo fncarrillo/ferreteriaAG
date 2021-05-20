@@ -1,0 +1,60 @@
+@media only screen and (orientation:landscape){
+
+.main-message-container{
+	display: flex;
+	height: 80vh;
+	box-sizing: border-box;
+	margin: 0;	
+	padding: 40rem;
+	background-color: #000235;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.main-message-container img{
+	text-align: center;
+	object-fit: contain;
+	height: 300rem;
+	width: 300rem;
+	margin-right: 25rem;
+}
+
+.message{
+	padding: 50rem;
+	padding-right: 80rem;
+	font-size: 40rem;
+	text-align: justify;
+}
+
+}
+
+@media only screen and (orientation:portrait){
+
+.main-message-container{
+	display: flex;
+	height: 100vh;
+	margin: 0;	
+	padding: 40rem;
+	background-color: #000235;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.main-message-container img{
+	text-align: center;
+	object-fit: contain;
+	height: 300rem;
+	width: 300rem;
+	margin-right: 25rem;
+}
+
+.message{
+	padding: 50rem;
+	padding-right: 80rem;
+	font-size: 40rem;
+	text-align: center;
+}
+
+}
