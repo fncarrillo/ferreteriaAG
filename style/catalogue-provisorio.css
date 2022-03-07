@@ -57,4 +57,15 @@
 	text-align: center;
 }
 
+.main{
+	display: flex;
+	min-height: 100vh;
+	justify-content: center;
+	
+}
+
+.category{
+	
+}
+
 }
