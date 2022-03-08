@@ -91,6 +91,9 @@
 @media only screen and (orientation: landscape){
 
 	footer{
+		position: relative;
+		top: 0;
+		left: 0;
 		background-color: var(--footer-color);
 		padding: 30rem;
 		box-sizing: border-box;
@@ -99,9 +102,9 @@
 	}
 
 	.footer__logo-container{
-		display: block;
-		width: 160rem;
-		height: 102rem; 
+		float: left;
+		width: 200rem; 
+		margin-left: 200rem;
 		object-fit: cover;
 		text-align: left;
 		padding: 0;
@@ -117,22 +120,23 @@
 	.footer__ul{
 		display: grid;
 		list-style: none;
-		grid-template-rows: repeat(2,minmax(max-content,1fr));
-		grid-template-columns: minmax(120rem,1fr) minmax(220rem,1fr) minmax(120rem,1fr);
-		grid-gap: 10rem;
+		grid-template-rows: repeat(2,auto);
+		grid-template-columns: 100rem repeat(auto-fit,minmax(200rem,0.3fr));
 		align-items: center;
+		justify-content: center;
+		align-content: center;
+		gap: 20rem;
 		position: relative;
 		top: 0;
 		left: 0;
-		margin-top: 10rem;
-		max-width: 60%;
+		margin: 10rem;
 	}
 
 	.footer__li{
 		display: inline-block;
 		color: #FFFFFF;
 		padding: 2rem 0rem 10rem 2rem;
-		font-size: 24rem;
+		font-size: 36rem;
 		line-height: 2;
 		margin: 5rem 0rem;
 		box-sizing: content-box;
@@ -146,7 +150,7 @@
 	.footer__icon{
 		float: left;
 		background-color: var(--dark-ng-blue);
-		font-size: 24rem;
+		font-size: 36rem;
 		padding: 0;
 		margin-right: 10rem;
 	}
@@ -159,7 +163,7 @@
 	.footer__data{
 		font-style: normal;
 		text-align: left;
-		font-size: 12rem;
+		font-size: 18rem;
 		margin: 2rem 10rem;	
 		line-height: 1;
 	}
@@ -185,7 +189,7 @@
 		grid-row: 1 /span 1;
 	}
 	#clock{
-		grid-column: 1 /span 1;
+		grid-column: 3 /span 1;
 		grid-row: 2 /span 1;
 	}
 	.network{
@@ -194,25 +198,28 @@
 	}
 
 	#fb{
-		position: absolute;
-		top: 0;
-		left: 0;
+		grid-column: 1 /span 1;
+		grid-row: 1 /span 1;
+		align-self: center;
+		justify-self: center;
 	}
 
 	#is{
-		position: absolute;
-		top: 0;
-		left: 40rem;
+		grid-column: 1 /span 1;
+		grid-row: 2 /span 1;
+		align-self: center;
+		justify-self: center;
 	}
 
 	.copyright{
 		position: relative;
-		top: 25rem;
+		bottom: 0;
 		color: #FFFFFF;
 		text-align: center;
-		font-size: 10rem;
+		font-size: 15rem;
 		line-height: 1;
-		margin: 50rem 0rem 25rem 0rem;
+		clear: left;
+		margin-top: 50rem;
 	}	
 
 }

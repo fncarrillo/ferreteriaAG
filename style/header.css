@@ -5,7 +5,7 @@
 .logo_container{
 	height: 100%;
 	max-width: calc(2*(var(--header-height)));
-	padding: 5rem;
+	padding: 10rem;
 	box-sizing: border-box;
 	float: left;
 	flex-grow: 10;
