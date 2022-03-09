@@ -6,6 +6,10 @@
 		width: 100%;
 		box-sizing: border-box;
 		min-height: 100vh;
+		position: relative;
+		top: 0;
+		left: 0;
+		z-index: 2;
 	}
 
 	.footer__logo-container{
@@ -121,6 +125,10 @@
 		background-color: var(--footer-color);
 		padding: 30rem;
 		box-sizing: border-box;
+		position: relative;
+		top: 0;
+		left: 0;
+		z-index: 2;
 		max-width: var(--web-max-width);
 		min-width: var(--web-min-width);
 	}
@@ -146,7 +154,7 @@
 		width: 50vw;
 		grid-template-rows: repeat(2,auto);
 		/*grid-template-columns: 100rem repeat(auto-fit,minmax(200rem,0.3fr));*/
-		grid-template-columns: 80rem minmax(200rem,2.5fr) minmax(280rem,2fr);
+		grid-template-columns: minmax(80rem,1fr) minmax(200rem,2.5fr) minmax(280rem,2fr);
 		align-items: center;
 		align-content: center;
 		justify-content: right;

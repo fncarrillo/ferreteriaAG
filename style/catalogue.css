@@ -39,9 +39,9 @@
     box-sizing: content-box;
     /*grid-template-columns: repeat(5,380em);
     grid-template-rows: repeat(auto-fit,380em);*/
-    grid-template-columns: repeat(auto-fill,400rem);
-    grid-template-rows: repeat(auto-fill,400rem);
-    grid-auto-rows: 400rem;
+    grid-template-columns: repeat(auto-fill,450rem);
+    grid-template-rows: repeat(auto-fill,450rem);
+    grid-auto-rows: 450rem;
     align-content: center;
     align-items: center;
     justify-items: center;
