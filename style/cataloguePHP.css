@@ -2,12 +2,11 @@
     position: relative;
     top: 0;
     left: 0;
-    z-index: 100;
     text-align: center;
     background-color: var(--light-border);
     border: 5px outset #0000CC;
     border-radius: 20px 20px 0px 20px;
-    transition: 0.4s;
+    transition: 0.8s;
     box-sizing: border-box;
     width: 70%;
     height: 70%;
@@ -30,26 +29,18 @@
 @media only screen and (orientation:landscape){
 
 .main{
-    display: grid;/*
+    display: grid;
     width: 100%;
     max-width: 100%;
-    height: 80vh;*/
+    height: 80vh;
     min-height: 80vh;
     padding: 100em 0;
-    box-sizing: content-box;
-    /*grid-template-columns: repeat(5,380em);
-    grid-template-rows: repeat(auto-fit,380em);*/
-    grid-template-columns: repeat(auto-fill,400rem);
-    grid-template-rows: repeat(auto-fill,400rem);
-    grid-auto-rows: 400rem;
+    grid-template-columns: repeat(5,380em);
+    grid-template-rows: repeat(auto-fit,380em);
     align-content: center;
     align-items: center;
     justify-items: center;
     justify-content: center;
-    position: relative;
-    top: 0;
-    left: 0;
-    z-index: 1;
 }
 
 .category img{
@@ -57,38 +48,14 @@
     height: 100%;
     box-sizing: border-box;
     object-fit: cover;
-    border-radius: 15px 15px 0px 15px;
+    border-radius: 20px 20px 0px 20px;
 }
 
 .category:hover{
-    box-shadow: 10px 10px 10px 0px #000000;
-    z-index: 10;
+    box-shadow: 5px 5px 7px -1px #85ADFF;
     width: 75%;
     height: 75%;
 }
-
-#filtroFondo{
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 5;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(63, 55, 201,0.2);
-}
-
-#fondo{
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 4;
-    width: 100%;
-    height: 100%;
-    background: url("../img/background/ferre1.jpg");
-    background-size: cover;
-    filter: blur(4px);
-}
-
 
 }
     
@@ -103,7 +70,6 @@
     box-sizing: border-box;
     justify-content: center;
     align-items: center;
-    background-color: #4361ee;
 }
 
 .category{
@@ -118,11 +84,11 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 15px 15px 0px 15px;
+    border-radius: 20px 20px 0px 20px;
 }
 
 .category:hover{
-    box-shadow: 10px 10px 10px 0px #000000;
+    box-shadow: 5px 5px 7px -1px #85ADFF;
     width: 305rem;
     height: 305rem;
 }
