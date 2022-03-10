@@ -1,96 +1,37 @@
-.category{
+.main{
     position: relative;
-    top: 0;
-    left: 0;
-    text-align: center;
-    background-color: var(--light-border);
-    border: 5px outset #0000CC;
-    border-radius: 20px 20px 0px 20px;
-    transition: 0.8s;
-    box-sizing: border-box;
-    width: 70%;
-    height: 70%;
-    background: url("../img/NoImageAvailable.png");
+    min-height: 80vh;
+    font-size: 25rem;
+    min-height: 80vh;
+    padding: 100rem;
 }
 
-.category p{
-    font-size: 20rem;
-    font-weight: bold;
-    background-color: rgba(0,0,0,0.5);
-    border-radius: 0px 0px 0px 15px;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    text-align: center;	
-    padding: 5% 0;
+.marca{
+    display: block;
 }
 
 @media only screen and (orientation:landscape){
 
-.main{
-    display: grid;
+.contenedorArticuloMarca{
+    display: grid;/*
     width: 100%;
     max-width: 100%;
-    height: 80vh;
+    height: 80vh;*/
     min-height: 80vh;
     padding: 100em 0;
-    grid-template-columns: repeat(5,380em);
-    grid-template-rows: repeat(auto-fit,380em);
+    box-sizing: content-box;
+    /*grid-template-columns: repeat(5,380em);
+    grid-template-rows: repeat(auto-fit,380em);*/
+    grid-template-columns: repeat(auto-fill,450rem);
+    grid-template-rows: repeat(auto-fill,450rem);
+    grid-auto-rows: 450rem;
     align-content: center;
     align-items: center;
     justify-items: center;
     justify-content: center;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 10;
 }
-
-.category img{
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    object-fit: cover;
-    border-radius: 20px 20px 0px 20px;
-}
-
-.category:hover{
-    box-shadow: 5px 5px 7px -1px #85ADFF;
-    width: 75%;
-    height: 75%;
-}
-
-}
-    
-@media only screen and (orientation:portrait){
-    
-.main{
-    display: flex;
-    padding: 10%;
-    flex-direction: column;
-    min-height: 100vh;
-    max-width: 100vw;
-    box-sizing: border-box;
-    justify-content: center;
-    align-items: center;
-}
-
-.category{
-    margin: 15rem;
-    height: 300rem;
-    width: 300rem;
-    box-sizing: border-box;
-}
-
-
-.category > img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 20px 20px 0px 20px;
-}
-
-.category:hover{
-    box-shadow: 5px 5px 7px -1px #85ADFF;
-    width: 305rem;
-    height: 305rem;
-}
-
 }

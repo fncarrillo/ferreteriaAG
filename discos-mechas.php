@@ -1,44 +1,14 @@
-<?php
-
-$id_categoria=7;
-$srv="localhost";
-$user="root";
-$passwd="";
-$db="ferreteriaag";
-
-$connection = new mysqli($srv,$user,$passwd,$db);
-if ($connection->connect_errno) {
-    echo "Fallo al conectar a MySQL: (" . $connection->connect_errno . ") " . $connection->connect_error;
-}
-
-
-$brandQuery = "SELECT `marca` FROM `marca`,`articulo` WHERE `articulo`.`id_categoria`=".$id_categoria." AND `marca`.`id_marca`=`articulo`.`id_marca` GROUP BY `marca`;";
-$queryResult = mysqli_query($connection,$brandQuery);
-/*
-while ($brand = mysqli_fetch_array($queryResult)){
-    echo $brand['marca']."<br/>";
-}*/
-
-$artQuery = "SELECT `articulo`.`nombre`,`articulo`.`descripcion` FROM `articulo`,`categoria` WHERE `articulo`.`id_categoria`=`categoria`.`id_categoria` AND `articulo`.`id_categoria`=".$id_categoria." ORDER BY `articulo`.`id_marca`;";
-$queryResult = mysqli_query($connection,$artQuery);
-/*
-while ($art = mysqli_fetch_array($queryResult)){
-    echo $art['nombre']." ".$art['descripcion']."<br/>";
-}*/
-mysqli_close($connection);
-
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
 	<title> Ferreteria AG </title>
+	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
 	<link rel="stylesheet" type="text/css" href="style/masterdata.css">
 	<link rel="stylesheet" type="text/css" href="style/normalize.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!--Styles-->
 	<link rel="stylesheet" type="text/css" href="style/header.css">
-	<link rel="stylesheet" type="text/css" href="style/catalogue.css">
+	<link rel="stylesheet" type="text/css" href="style/cataloguePHP.css">
 	<link rel="stylesheet" type="text/css" href="style/footer.css">
 	<!--Font&Logo-->
 	<link rel="icon" type="image/jpg" href="img/web-logo/logo-pestaña.png"/>
@@ -52,7 +22,13 @@ mysqli_close($connection);
 </head>
 	
 <body>
-
+	<?php 
+		include('accesoDB.php');
+		$id_categoria=7;
+		$query = "SELECT `marca`.`marca` FROM `marca`,`articulo`,`categoria` WHERE `marca`.`id_marca`=`articulo`.`id_marca` AND `categoria`.`id_categoria`=".$id_categoria." GROUP BY `marca`.`marca` ORDER BY `marca`.`id_marca`;";
+		//$query.= "SELECT `articulo`.`nombre`, `articulo`.`descripcion` FROM `articulo`,`categoria`,`marca` WHERE `articulo`.`id_categoria`=`categoria`.`id_categoria` AND `marca`.`id_marca`=`articulo`.`id_marca` AND `articulo`.`id_categoria`=".$id_categoria." ORDER BY `articulo`.`id_marca`;";
+		connect($query);
+	?>
 	<header class="header header__style">
 		<div class="logo_container">
 			<img src="img/web-logo/logo.png">
@@ -67,52 +43,29 @@ mysqli_close($connection);
 			</nav>
 		</div>
 	</header>
+<?php
+	echo '<main class="main">';
+		echo '<h1 class="categoria"> Discos & Mechas </h1>';
+		echo '<div id="fondo"></div>';
+		echo '<div id="filtroFondo"></div>';
 
+		foreach($GLOBALS['brand'] as $brandItem){
+			echo '<h2 class="marca">'.$brandItem['marca'].'</h2>';
 
+			$query = "SELECT `articulo`.`nombre`, `articulo`.`descripcion` FROM `articulo`,`categoria`,`marca` WHERE `articulo`.`id_categoria`=`categoria`.`id_categoria` AND `marca`.`id_marca`=`articulo`.`id_marca` AND `articulo`.`id_categoria`=".$id_categoria." AND `marca`.`marca`='".$brandItem['marca']."' ORDER BY `articulo`.`id_marca`;";
+			connect($query);
+			foreach($GLOBALS['art'] as $artItem){
 
-	<main class="main">
-		<div class="category">
-			<p>Máquinas</p>
-			<img src="img/catalogue/herram.png"/>			
-		</div>
-		<div class="category">
-			<p>Sanitarios</p>
-			<img src="img/catalogue/sanitario.jpg"/>			
-		</div>
-		<div class="category">
-			<p>Termofusion</p>
-			<img src="img/catalogue/termofusion.jpg"/>			
-		</div>
-		<div class="category">
-			<p>Polipropileno</p>
-			<img src="img/catalogue/ppn.jpg"/>			
-		</div>
-		<div class="category">
-			<p>PVC & Awaduct</p>
-			<img src="img/catalogue/awaduct.jpg"/>			
-		</div>
-		<div class="category">
-			<p>Buloneria</p>
-			<img src="img/catalogue/buloneria.jpg"/>			
-		</div>
-		<div class="category">
-			<p>Discos & Mechas</p>
-			<img src="img/catalogue/discos.jpg"/>			
-		</div>
-		<div class="category">
-			<p>Adhesivos & Siliconas</p>
-			<img src="img/catalogue/silicona.jpg"/>			
-		</div>
-		<div class="category">
-			<p>Reparación Hogar</p>
-			<img src="img/catalogue/rep-hogar.jpg"/>			
-		</div>
-		<div class="category">
-			<p>Articulos Hogar</p>
-			<img src="img/catalogue/art-hogar.jpg"/>
-		</div>
-	</main>
-
+				echo '<div class="contenedorArticuloMarca">';
+					echo '<div class="articulo">';
+						echo '<p class="nombreArt">'.$artItem['nombre'].'</p>';
+						echo '<p class="descripArt">'.$artItem['descripcion'].'</p>';
+					echo '</div>';
+				echo '</div>';
+			}	
+		} 
+	echo '</main>';
+?>
 	<footer>
 
 		<div class="font footer__logo-container">
@@ -160,7 +113,7 @@ mysqli_close($connection);
 
 		</ul>
 
-		<p class="copyright"> Copyright © 2021 – All rights reserved</p>
+		<p class="copyright"> Copyright © 2021 – All rights reserved </p>
 	</footer>
 
 </body>	
