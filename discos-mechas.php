@@ -43,29 +43,28 @@
 			</nav>
 		</div>
 	</header>
-<?php
-	echo '<main class="main">';
-		echo '<h1 class="categoria"> Discos & Mechas </h1>';
-		echo '<div id="fondo"></div>';
-		echo '<div id="filtroFondo"></div>';
 
-		foreach($GLOBALS['brand'] as $brandItem){
-			echo '<h2 class="marca">'.$brandItem['marca'].'</h2>';
+	<main class="main">
+		<h1 class="categoria"> Discos & Mechas </h1>
+		<div id="fondo"></div>
+		<div id="filtroFondo"></div>
 
-			$query = "SELECT `articulo`.`nombre`, `articulo`.`descripcion` FROM `articulo`,`categoria`,`marca` WHERE `articulo`.`id_categoria`=`categoria`.`id_categoria` AND `marca`.`id_marca`=`articulo`.`id_marca` AND `articulo`.`id_categoria`=".$id_categoria." AND `marca`.`marca`='".$brandItem['marca']."' ORDER BY `articulo`.`id_marca`;";
-			connect($query);
-			foreach($GLOBALS['art'] as $artItem){
+		<?php foreach($GLOBALS['brand'] as $brandItem){ ?>
+			<h2 class="marca"><?php echo $brandItem['marca'] ?></h2>
+			<div class="contenedorArticuloMarca">
+			<?php
+				$query = "SELECT `articulo`.`nombre`, `articulo`.`descripcion` FROM `articulo`,`categoria`,`marca` WHERE `articulo`.`id_categoria`=`categoria`.`id_categoria` AND `marca`.`id_marca`=`articulo`.`id_marca` AND `articulo`.`id_categoria`=".$id_categoria." AND `marca`.`marca`='".$brandItem['marca']."' ORDER BY `articulo`.`id_marca`;";
+				connect($query);
+				foreach($GLOBALS['art'] as $artItem){
+			?>				
+				<div class="articulo">
+					<p class="nombreArt"><?php echo $artItem['nombre'] ?></p>
+					<p class="descripArt"><?php echo $artItem['descripcion'] ?></p>
+				</div>						
+			<?php }} ?>
+			</div>	
+	</main>
 
-				echo '<div class="contenedorArticuloMarca">';
-					echo '<div class="articulo">';
-						echo '<p class="nombreArt">'.$artItem['nombre'].'</p>';
-						echo '<p class="descripArt">'.$artItem['descripcion'].'</p>';
-					echo '</div>';
-				echo '</div>';
-			}	
-		} 
-	echo '</main>';
-?>
 	<footer>
 
 		<div class="font footer__logo-container">

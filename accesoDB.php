@@ -2,14 +2,16 @@
 
 $brand = array();
 $art;
+$tablaMarca = true;
 
 function connect($query){
     $srv="localhost";
     $user="root";
     $passwd="";
     $db="ferreteriaag";
-    $primeraTabla = true;
     $termineMarca = true;
+    unset($GLOBALS['art']);
+    $GLOBALS['art']=array();
 
     $link = mysqli_connect($srv,$user,$passwd,$db);
 
@@ -22,18 +24,12 @@ function connect($query){
         do {
             if ($result = mysqli_store_result($link)) {
                 while ($row = mysqli_fetch_assoc($result)) {
-                    if($primeraTabla) {
-                        $GLOBALS['art'] = array();
-                        array_push($GLOBALS['brand'],$row);
-                    }
-                    else {
-                        array_push($GLOBALS['art'],$row);
-                    }
+                    if($GLOBALS['tablaMarca']) array_push($GLOBALS['brand'],$row);                    
+                    else array_push($GLOBALS['art'],$row);
                 }
-                $termineMarca=false;
                 mysqli_free_result($result);
             }          
-            $primeraTabla=false;
+            $GLOBALS['tablaMarca']=false;
         } while (mysqli_next_result($link));        
     }
     mysqli_close($link);
