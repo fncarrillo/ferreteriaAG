@@ -45,24 +45,28 @@
 	</header>
 
 	<main class="main">
+	<div id="fondo"></div>
+	<div id="filtroFondo"></div>
+		<div class="fondo"></div>
 		<h1 class="categoria"> Discos & Mechas </h1>
-		<div id="fondo"></div>
-		<div id="filtroFondo"></div>
-
 		<?php foreach($GLOBALS['brand'] as $brandItem){ ?>
 			<h2 class="marca"><?php echo $brandItem['marca'] ?></h2>
 			<div class="contenedorArticuloMarca">
 			<?php
-				$query = "SELECT `articulo`.`nombre`, `articulo`.`descripcion` FROM `articulo`,`categoria`,`marca` WHERE `articulo`.`id_categoria`=`categoria`.`id_categoria` AND `marca`.`id_marca`=`articulo`.`id_marca` AND `articulo`.`id_categoria`=".$id_categoria." AND `marca`.`marca`='".$brandItem['marca']."' ORDER BY `articulo`.`id_marca`;";
+				$query = "SELECT `articulo`.`nombre`, `articulo`.`descripcion`, `articulo`.`ruta_img` FROM `articulo`,`categoria`,`marca` WHERE `articulo`.`id_categoria`=`categoria`.`id_categoria` AND `marca`.`id_marca`=`articulo`.`id_marca` AND `articulo`.`id_categoria`=".$id_categoria." AND `marca`.`marca`='".$brandItem['marca']."' ORDER BY `articulo`.`id_marca`;";
 				connect($query);
 				foreach($GLOBALS['art'] as $artItem){
-			?>				
+			?>						
 				<div class="articulo">
-					<p class="nombreArt"><?php echo $artItem['nombre'] ?></p>
-					<p class="descripArt"><?php echo $artItem['descripcion'] ?></p>
-				</div>						
-			<?php }} ?>
-			</div>	
+					<div class="contenedorImgArt"> <img src="<?php echo $artItem['ruta_img'] ?>"/> </div>
+					<div class="detallesArt">
+						<span class="nombreArt"><?php echo $artItem['nombre'] ?></span>
+						<span class="descripArt"><?php echo $artItem['descripcion'] ?></span>						
+					</div>					
+				</div>
+			<?php }?>
+			</div>
+			<?php }?>
 	</main>
 
 	<footer>
