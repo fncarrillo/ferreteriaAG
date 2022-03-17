@@ -1,17 +1,15 @@
 <?php
 
-$brand = array();
-$art;
-$tablaMarca = true;
+$articulos;
 
 function connect($query){
     $srv="localhost";
     $user="root";
     $passwd="";
-    $db="ferreteriaag";
-    $termineMarca = true;
-    unset($GLOBALS['art']);
-    $GLOBALS['art']=array();
+    $db="ferreteriaag";   
+
+    unset($GLOBALS['articulos']);
+    $GLOBALS['articulos']=array();
 
     $link = mysqli_connect($srv,$user,$passwd,$db);
 
@@ -19,33 +17,15 @@ function connect($query){
         printf("Conexión fallida: %s\n", mysqli_connect_error());
         exit();
     }
-    
-    if (mysqli_multi_query($link, $query)) {
-        do {
-            if ($result = mysqli_store_result($link)) {
-                while ($row = mysqli_fetch_assoc($result)) {
-                    if($GLOBALS['tablaMarca']) array_push($GLOBALS['brand'],$row);                    
-                    else array_push($GLOBALS['art'],$row);
-                }
-                mysqli_free_result($result);
-            }          
-            $GLOBALS['tablaMarca']=false;
-        } while (mysqli_next_result($link));        
-    }
-    mysqli_close($link);
- /*
-    foreach($GLOBALS['brand'] as $values){
-        foreach($values as $value){
-            echo $value."<br/>";
+
+    if ($resultado = mysqli_query($link,$query)){
+        while ($row = mysqli_fetch_assoc($resultado)) {
+            array_push($GLOBALS['articulos'],$row);
         }
     }
 
-    foreach($GLOBALS['art'] as $values){
-        foreach($values as $value){
-            echo $value."<br/>";
-        }
-    }
-*/
+    mysqli_close($link);
+
 }
 
 ?>
