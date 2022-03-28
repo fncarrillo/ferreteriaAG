@@ -24,7 +24,7 @@
 <body>
 	<?php 
 		include('accesoDB.php');
-		$id_categoria=7;
+		$id_categoria=10;
 		$query = "SELECT `nombre`,`descripcion`,`ruta_img` FROM articulo, categorias WHERE articulo.`id_categoria`=categorias.`id_categoria` AND articulo.`id_categoria`=".$id_categoria." ORDER BY articulo.`id_marca`;";
 		connect($query);
 	?>
@@ -43,7 +43,7 @@
 		</div>
 	</header>
 	<div class="tituloCategoria">
-			<h1 class="categoria"> Discos & Mechas </h1>
+			<h1 class="categoria"> Articulos Hogar </h1>
 	</div>
 	<main class="main">
 
