@@ -44,7 +44,7 @@
 	</header>
 	<div class="tituloCategoria">
 		<div class="opacidadTituloCategoria"> </div>
-		<h1 class="categoria"> Sanitarios </h1>
+		<h1 class="categoria"> Buloneria </h1>
 	</div>
 	<main class="main">
 

@@ -202,7 +202,12 @@
 	}
 
 	.footer__social-network > p {
-		display: none;
+		/*display: none;*/
+		font-style: normal;
+		text-align: left;
+		font-size: 18rem;
+		margin: 2rem 10rem;	
+		line-height: 1;
 	}
 
 	#footer__data-alone{
